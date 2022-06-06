@@ -23,20 +23,20 @@ public class DBHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public void insert(String name, int age, String Addr){
+    public void insert(String School, String Name, String PassWord){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("INSERT INTO Person VALUES('"+ name + "', " + age + ", '"+ Addr + "')");
+        db.execSQL("INSERT INTO Person VALUES('"+ School + "', " + Name + ", '"+ PassWord + "')");
         db.close();
     }
 
-    public void Update(String name, int age, String Addr){
+    public void Update(String School, String Name, String PassWord){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE Person SET age = " + age + ", ADDR = '" + Addr + "'" + " WHERE NAME = '" + name + "'");
+        db.execSQL("UPDATE Person SET School = " + School + ", PassWord = '" + PassWord + "'" + " WHERE NAME = '" + Name + "'");
     }
 
-    public void Delete(String name){
+    public void Delete(String Name){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DELETE Person WHERE NAME = '" + name + "'");
+        db.execSQL("DELETE Person WHERE NAME = '" + Name + "'");
         db.close();
     }
 
@@ -46,10 +46,10 @@ public class DBHelper extends SQLiteOpenHelper{
 
         Cursor cursor = db.rawQuery("SELECT * FROM Person", null);
         while(cursor.moveToNext()){
-            result += "이름 : " + cursor.getString(0)
-                    + ", 나이 : "
-                    + cursor.getInt(1)
-                    + ", 주소 : "
+            result += "학교 : " + cursor.getString(0)
+                    + ", 이름 : "
+                    + cursor.getString(1)
+                    + ", 비밀번호 : "
                     + cursor.getString(2)
                     +"\n";
         }
