@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context="com.example.smash.LoginActivity">
 
     <ImageView
         android:id="@+id/title"
@@ -24,7 +24,7 @@
             android:layout_marginHorizontal="90dp"/>
 
         <EditText
-            android:id="@+id/school_text"
+            android:id="@+id/text_school"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="150dp"
@@ -40,10 +40,10 @@
             android:src="@drawable/user" />
 
         <EditText
-            android:id="@+id/user_text"
+            android:id="@+id/text_user"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/school_text"
+            android:layout_below="@+id/text_school"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext" />
@@ -58,10 +58,10 @@
             android:src="@drawable/key" />
 
         <EditText
-            android:id="@+id/key_text"
+            android:id="@+id/text_key"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/user_text"
+            android:layout_below="@+id/text_user"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext" />
@@ -70,7 +70,7 @@
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/key_text"
+            android:layout_below="@+id/text_key"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="50dp"
             android:backgroundTint="#606060"
