@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public void insert(String School, String Name, String PassWord){
+    public void Insert(String School, String Name, String PassWord){
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("INSERT INTO Person VALUES('"+ School + "', " + Name + ", '"+ PassWord + "')");
         db.close();
