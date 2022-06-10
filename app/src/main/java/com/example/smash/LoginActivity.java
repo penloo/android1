@@ -10,37 +10,30 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btn_login;
-    EditText text_school, text_user, text_key;
-
-    // DBHelper
-    DBHelper DB;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         setTitle("Smash");
 
-        btn_login = (Button) findViewById(R.id.btn_login);
-
-        text_school = (EditText) findViewById(R.id.text_school);
-        text_user = (EditText) findViewById(R.id.text_user);
-        text_key = (EditText) findViewById(R.id.text_key);
-
-        DB = new DBHelper(this);
+        Button btn_login = (Button) findViewById(R.id.btn_login);
+        Button btn_signup = findViewById(R.id.btn_signup);
+        EditText text_school = (EditText) findViewById(R.id.text_school);
+        EditText text_user = (EditText) findViewById(R.id.text_user);
+        EditText text_password = (EditText) findViewById(R.id.text_password);
+        DBHelper DB = new DBHelper(this);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String school = text_school.getText().toString();
                 String user = text_user.getText().toString();
-                String key = text_key.getText().toString();
+                String password = text_password.getText().toString();
 
-                if(school.equals("")||user.equals("")||key.equals(""))
+                if(school.equals("")||user.equals("")||password.equals(""))
                     Toast.makeText(LoginActivity.this, "Fill up all fields", Toast.LENGTH_SHORT).show();
                 else{
-                    Boolean checkuserpass = DB.checkusernamepassword(school, user, key);
+                    Boolean checkuserpass = DB.checkusernamepassword(school, user, password);
                     if(checkuserpass){
                         Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), SetupActivity.class);
@@ -49,6 +42,14 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        btn_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivity(intent);
             }
         });
     }
