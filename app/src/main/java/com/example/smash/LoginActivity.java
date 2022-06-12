@@ -7,32 +7,49 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button login;
-    EditText schoolEdt;
-    EditText userEdt;
-    EditText passEdt;
-
-    DBHelper dbHelper;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         setTitle("Smash");
 
-        Button login = (Button) findViewById(R.id.btn_login);
-        EditText schoolEdt = (EditText) findViewById(R.id.school_text);
-        EditText userEdt = (EditText) findViewById(R.id.user_text);
-        EditText passEdt = (EditText) findViewById(R.id.key_text);
+        Button btn_login = (Button) findViewById(R.id.btn_login);
+        Button btn_signup = findViewById(R.id.btn_signup);
+        EditText text_school = (EditText) findViewById(R.id.text_school);
+        EditText text_user = (EditText) findViewById(R.id.text_user);
+        EditText text_password = (EditText) findViewById(R.id.text_password);
+        com.example.smash.DBHelper DB = new com.example.smash.DBHelper(this);
 
-        dbHelper = new DBHelper(LoginActivity.this, 1);
-
-        login.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getApplicationContext(), SetupActivity.class);
+                String school = text_school.getText().toString();
+                String user = text_user.getText().toString();
+                String password = text_password.getText().toString();
+
+                if (school.equals("") || user.equals("") || password.equals(""))
+                    Toast.makeText(LoginActivity.this, "Fill up all fields", Toast.LENGTH_SHORT).show();
+                else {
+                    Boolean checkuserpass = DB.checkusernamepassword(school, user, password);
+                    if (checkuserpass) {
+                        Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), com.example.smash.SetupActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        btn_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), com.example.smash.SignupActivity.class);
                 startActivity(intent);
             }
         });
