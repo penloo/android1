@@ -10,18 +10,16 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DBNAME = "Login.db";
-    static  final String infoTableName = "info.db";
+    public static final String DBNAME = "DB";
     private SQLiteDatabase userInfo;
 
     public DBHelper(@Nullable Context context) {
-        super(context, "Login.db", null, 1);
+        super(context, "DB", null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase Login) {
-        Login.execSQL("create Table users(school TEXT, user TEXT primary key, password TEXT)");
-        userInfo.execSQL("create Table userInfo(name TEXT, department TEXT, grade TEXT, interest TEXT, time TEXT, place TEXT)");
+    public void onCreate(SQLiteDatabase DB) {
+        DB.execSQL("create Table SmashDB(school TEXT, user TEXT primary key, password TEXT, name TEXT, department TEXT, grade TEXT, interest TEXT, time TEXT, place TEXT)");
     }
 
     @Override
@@ -35,7 +33,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("school", school);
         contentValues.put("user", user);
         contentValues.put("password", password);
-        long result = MyDB.insert("users", null, contentValues);
+        long result = MyDB.insert("SmashDB", null, contentValues);
         if (result == -1) return false;
         else
             return true;
@@ -43,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Boolean checkusernamepassword(String school, String user, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor = MyDB.rawQuery("Select * from users where school = ? and user = ? and password = ?", new String[]{school, user, password});
+        Cursor cursor = MyDB.rawQuery("Select * from SmashDB where school = ? and user = ? and password = ?", new String[]{school, user, password});
         if (cursor.getCount() > 0)
             return true;
         else
@@ -59,7 +57,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("interest", interest);
         contentValues.put("time", time);
         contentValues.put("place", place);
-        long result = MyDB.insert("userInfo", null, contentValues);
+        long result = MyDB.insert("SmashDB", null, contentValues);
         if(result == -1) return false;
         else
             return true;
@@ -67,7 +65,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Boolean DenoteInfo(String name, String department, String grade, String interest, String time, String place){
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor = MyDB.rawQuery("Select * from userInfo where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?", new String[]{name, department, grade, interest, time, place});
+        Cursor cursor = MyDB.rawQuery("Select * from SmashDB where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?", new String[]{name, department, grade, interest, time, place});
         if(cursor.getCount() > 0)
             return true;
         else
