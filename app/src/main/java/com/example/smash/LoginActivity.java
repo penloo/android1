@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText text_school = (EditText) findViewById(R.id.text_school);
         EditText text_user = (EditText) findViewById(R.id.text_user);
         EditText text_password = (EditText) findViewById(R.id.text_password);
-        com.example.smash.DBHelper DB = new com.example.smash.DBHelper(this);
+        DBHelper DB = new DBHelper(this);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

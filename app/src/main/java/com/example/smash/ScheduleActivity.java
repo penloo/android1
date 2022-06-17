@@ -29,7 +29,7 @@ public class ScheduleActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.schedule);
         calendarView = findViewById(R.id.calendarView);
-        diaryTextView = findViewById(R.id.diaryTextView);
+        diaryTextView = findViewById(R.id.dateView);
         save_Btn = findViewById(R.id.save_Btn);
         del_Btn = findViewById(R.id.del_Btn);
         cha_Btn = findViewById(R.id.cha_Btn);

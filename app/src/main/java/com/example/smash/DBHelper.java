@@ -11,6 +11,8 @@ import androidx.annotation.Nullable;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "Login.db";
+    static  final String infoTableName = "info.db";
+    private SQLiteDatabase userInfo;
 
     public DBHelper(@Nullable Context context) {
         super(context, "Login.db", null, 1);
@@ -19,6 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase Login) {
         Login.execSQL("create Table users(school TEXT, user TEXT primary key, password TEXT)");
+        userInfo.execSQL("create Table userInfo(name TEXT, department TEXT, grade TEXT, interest TEXT, time TEXT, place TEXT)");
     }
 
     @Override
@@ -42,6 +45,30 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * from users where school = ? and user = ? and password = ?", new String[]{school, user, password});
         if (cursor.getCount() > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public Boolean insertInfo(String name, String department, String grade, String interest, String time, String place){
+        SQLiteDatabase MyDB = this. getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("department", department);
+        contentValues.put("grade", grade);
+        contentValues.put("interest", interest);
+        contentValues.put("time", time);
+        contentValues.put("place", place);
+        long result = MyDB.insert("userInfo", null, contentValues);
+        if(result == -1) return false;
+        else
+            return true;
+    }
+
+    public Boolean DenoteInfo(String name, String department, String grade, String interest, String time, String place){
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select * from userInfo where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?", new String[]{name, department, grade, interest, time, place});
+        if(cursor.getCount() > 0)
             return true;
         else
             return false;
