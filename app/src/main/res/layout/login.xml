@@ -32,7 +32,8 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="150dp"
             android:background="@drawable/edittext"
-            android:hint="school" />
+            android:hint="   대학교"
+            />
 
         <ImageView
             android:id="@+id/icon_user"
@@ -45,13 +46,13 @@
 
         <EditText
             android:id="@+id/text_user"
-            android:layout_width="match_parent"
+            android:layout_width="156dp"
             android:layout_height="50dp"
             android:layout_below="@+id/text_school"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/edittext"
-            android:hint="user" />
+            android:hint="  학번" />
 
         <ImageView
             android:id="@+id/icon_password"
@@ -64,13 +65,13 @@
 
         <EditText
             android:id="@+id/text_password"
-            android:layout_width="match_parent"
+            android:layout_width="1000dp"
             android:layout_height="50dp"
             android:layout_below="@+id/text_user"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/edittext"
-            android:hint="password" />
+            android:hint="  비밀번호" />
 
         <Button
             android:id="@+id/btn_login"
@@ -85,12 +86,13 @@
 
         <Button
             android:id="@+id/btn_signup"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_login"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#606060"
+            android:backgroundTint="#F3CEFB"
+            android:background="@drawable/round"
             android:text="회원가입" />
 
     </RelativeLayout>

@@ -4,51 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/split2"
     android:orientation="vertical"
+
     tools:context=".SignupActivity">
 
-
-    <EditText
-        android:id="@+id/text_school"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:hint="school"
-        android:minHeight="48dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
 
-    <EditText
-        android:id="@+id/text_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_school"
-        android:layout_marginTop="50dp"
-        android:hint="user"
-        android:minHeight="48dp" />
+        <Spinner
+            android:id="@+id/text_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="   학교"
+            android:entries="@array/school"
+            android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/text_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_user"
-        android:layout_marginTop="50dp"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/text_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_school"
+            android:layout_marginTop="50dp"
+            android:hint="   학번"
+            android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btn_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_password"
-        android:layout_marginTop="50dp"
-        android:text="Register" />
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_user"
+            android:layout_marginTop="50dp"
+            android:hint="   비밀번호"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btn_signin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_signup"
-        android:layout_marginTop="50dp"
-        android:text="User already exists, proceed to sign in" />
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_password"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round"
+            android:text=" 가입하기"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_signup"
+            android:layout_marginTop="50dp"
+            android:text="User already exists, proceed to sign in" />
+    </LinearLayout>
 
 </LinearLayout>

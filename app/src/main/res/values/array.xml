@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school">
+        <item> 성결대학교 </item>
+        <item> 성결대 </item>
+        <item> 성결 유니버시티 </item>
+        <item> 모바일대 </item>
+        <item> 프로그래밍대 </item>
+    </string-array>
+</resources>
