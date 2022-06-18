@@ -25,6 +25,7 @@
             android:layout_height="250dp"
             android:adjustViewBounds="true"
             android:onClick="onClick"
+
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <Button
@@ -42,42 +43,176 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/textStudy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="스터디명 :" />
+
+                    <TextView
+                        android:id="@+id/studyname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/textCate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="카테고리 :" />
+
+                    <TextView
+                        android:id="@+id/Cat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txtwhere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="스터디 위치 :" />
+
+                    <TextView
+                        android:id="@+id/where"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="스터디 형태      " />
+
+                    <RadioGroup
+                        android:orientation="horizontal"
+                        android:layout_weight="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" >
+                        <RadioButton
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="오프라인"/>
+                        <RadioButton
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="온라인"/>
+                    </RadioGroup>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="스터디 형태      " />
+
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp" >
+                            <RadioButton
+                                android:layout_weight="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="오프라인"/>
+                            <RadioButton
+                                android:layout_weight="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="온라인"/>
+                        </RadioGroup>
+
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
 
                 <TextView
-                    android:id="@+id/studyname"
-                    android:layout_width="match_parent"
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-                <TextView
-                    android:id="@+id/categori"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-                <TextView
-                    android:id="@+id/where"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="스터디 형태      " />
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" >
+                    <RadioButton
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="오프라인"/>
+                    <RadioButton
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="온라인"/>
+                </RadioGroup>
+
+
+
             </LinearLayout>
 
 
