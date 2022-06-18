@@ -14,9 +14,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = database.getReference();
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
                     Boolean checkuserpass = DB.checkusernamepassword(school, user, password);
                     if (checkuserpass) {
                         Toast.makeText(LoginActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
-                        addUser(school, user, password);
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                     } else {
@@ -64,8 +60,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void addUser(String school, String user, String password) {
-        GetSet getset = new GetSet(school, user, password);
-        databaseReference.child(school).child(school).child(user).setValue(password);
-    }
+
+
 }
