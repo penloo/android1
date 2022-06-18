@@ -65,7 +65,7 @@ public class SetupActivity extends AppCompatActivity {
                     Boolean insertInfo = DB.insertInfo(name, department, grade, interest, time, place);
                     if(insertInfo){
                         Toast.makeText(SetupActivity.this, "설정 완료", Toast.LENGTH_SHORT).show();
-                        infoList = DB.selectInfo();
+                        infoList = DB.selectInfo(name, department, grade, interest, time, place);
                         Iterator<String> iterator = infoList.iterator();
                         while(iterator.hasNext()){
                             infoName.setText(iterator.next());

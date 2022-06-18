@@ -35,15 +35,15 @@ public class SignupActivity extends AppCompatActivity {
                 String password = text_password.getText().toString();
 
                 if (school.equals("") || user.equals("") || password.equals(""))
-                    Toast.makeText(SignupActivity.this, "Please fill up all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "빈칸이 있습니다!", Toast.LENGTH_SHORT).show();
                 else {
                     Boolean insert = DB.insertData(school, user, password);
                     if (insert == true) {
-                        Toast.makeText(SignupActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        Toast.makeText(SignupActivity.this, "가입완료!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), SetupActivity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(SignupActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupActivity.this, "가입실패!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

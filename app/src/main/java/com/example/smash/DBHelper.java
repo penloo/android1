@@ -25,7 +25,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("create Table SmashDB(school TEXT, user TEXT primary key, password TEXT, name TEXT, department TEXT, grade TEXT, interest TEXT, time TEXT, place TEXT)");
+        DB.execSQL("create Table LoginDB(school TEXT, user TEXT primary key, password TEXT)");
+        DB.execSQL("create Table InfoDB(name TEXT, department TEXT, grade TEXT, interest TEXT, time TEXT, place TEXT)");
     }
 
     @Override
@@ -39,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("school", school);
         contentValues.put("user", user);
         contentValues.put("password", password);
-        long result = MyDB.insert("SmashDB", null, contentValues);
+        long result = MyDB.insert("LoginDB", null, contentValues);
         if (result == -1) return false;
         else
             return true;
@@ -47,7 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Boolean checkusernamepassword(String school, String user, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor = MyDB.rawQuery("Select * from SmashDB where school = ? and user = ? and password = ?", new String[]{school, user, password});
+        Cursor cursor = MyDB.rawQuery("Select * from LoginDB where school = ? and user = ? and password = ?", new String[]{school, user, password});
         if (cursor.getCount() > 0)
             return true;
         else
@@ -64,16 +65,16 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("time", time);
         contentValues.put("place", place);
 
-        long result = MyDB.insert("SmashDB", null, contentValues);
+        long result = MyDB.insert("InfoDB", null, contentValues);
         if(result == -1) return false;
         else
             return true;
     }
 
-    public List<String> selectInfo(){
+    public List<String> selectInfo(String name, String department, String grade, String interest, String time, String place){
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        String SELECT_QUERY = "SELECT*FROM SmashDB where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?";
-        Cursor cur = getWritableDatabase().rawQuery(SELECT_QUERY,null);
+        String SELECT_QUERY = "SELECT*FROM InfoDB where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?";
+        Cursor cur = MyDB.rawQuery(SELECT_QUERY,new String[]{name, department, grade, interest, time, place});
 
         int i=0;
 

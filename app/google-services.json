@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13141737605",
+    "project_id": "smash-f5803",
+    "storage_bucket": "smash-f5803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13141737605:android:dcfa396893b606241b29ec",
+        "android_client_info": {
+          "package_name": "com.example.smash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13141737605-9q68i7gc591aavpou786ca5j2e5j442g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgUYXF-Ba1TcYsRMCndrNmL8wBZWXS4B4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13141737605-9q68i7gc591aavpou786ca5j2e5j442g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
