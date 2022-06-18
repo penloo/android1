@@ -25,6 +25,7 @@
         <activity android:name=".ScheduleActivity"/>
         <activity android:name=".SignupActivity"/>
         <activity android:name=".InfoActivity"/>
+        <activity android:name=".NoticeActivity"/>
     </application>
 
 </manifest>

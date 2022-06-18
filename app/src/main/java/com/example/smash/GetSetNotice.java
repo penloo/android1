@@ -10,12 +10,8 @@ public class GetSetNotice {
     private Date write_data;
     private String content;
 
-    public int getProfile_image() {
-        return profile_image;
-    }
-    public void setProfile_image(int profile_image) {
-        this.profile_image = profile_image;
-    }
+    public int getProfile_image() { return profile_image; }
+    public void setProfile_image(int profile_image) { this.profile_image = profile_image; }
 
     public String getNickname() {
         return nickname;
@@ -24,9 +20,7 @@ public class GetSetNotice {
         this.nickname = nickname;
     }
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() { return title; }
     public void setTitle(String title) {
         this.title = title;
     }
@@ -46,7 +40,6 @@ public class GetSetNotice {
     }
 
     public GetSetNotice(int profile_image, String nickname, String title, Date write_data, String content){
-        this.profile_image = profile_image;
         this.nickname = nickname;
         this.title = title;
         this.write_data = write_data;

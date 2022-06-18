@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/calendarText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="자유게시판"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/RoomInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="룸 정보"
+            android:layout_marginLeft="40dp" />
+        <Button
+            android:id="@+id/ScheduleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스케줄"
+            android:layout_marginLeft="30dp" />
+
+        <Button
+            android:id="@+id/noticeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="게시판" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"/>
+
+
+
+</LinearLayout>

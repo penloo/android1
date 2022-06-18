@@ -23,25 +23,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="룸 정보"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="40dp" />
         <Button
             android:id="@+id/ScheduleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="스케줄"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="30dp" />
+
         <Button
-            android:id="@+id/RoomNotice"
+            android:id="@+id/noticeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="게시판"
-            android:layout_marginLeft="10dp" />
-        <Button
-            android:id="@+id/RoomChat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="채팅방"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="30dp"
+            android:text="게시판" />
 
     </LinearLayout>
 
@@ -124,7 +119,7 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="No."
+                        android:text="1번"
                         android:textSize="20dp"
                         />
                     <TextView
@@ -132,7 +127,7 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="Name"
+                        android:text="박태연"
                         android:textSize="20dp"
                         />
                     <TextView
@@ -140,8 +135,9 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="학번"
+                        android:text="2018xxxx"
                         android:textSize="20dp"
+                        android:gravity="left"
                         />
 
                 </TableRow>
@@ -156,7 +152,7 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="No."
+                        android:text="2번"
                         android:textSize="20dp"
                         />
                     <TextView
@@ -164,7 +160,7 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="Name"
+                        android:text="하재민"
                         android:textSize="20dp"
                         />
                     <TextView
@@ -172,21 +168,22 @@
                         android:layout_height="wrap_content"
 
                         android:paddingLeft="60dp"
-                        android:text="학번"
+                        android:text="2018xxxx"
                         android:textSize="20dp"
                         />
 
                 </TableRow>
             </TableLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp" />
+
 
         </LinearLayout>
 
     </ScrollView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp" />
 
 
 </LinearLayout>
