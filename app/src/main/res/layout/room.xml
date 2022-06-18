@@ -178,15 +178,15 @@
 
                 </TableRow>
             </TableLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"/>
 
         </LinearLayout>
 
     </ScrollView>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
 
 
 </LinearLayout>

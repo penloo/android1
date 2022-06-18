@@ -6,19 +6,24 @@
     android:orientation="vertical">
 
 
-
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_pass"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="내정보"
-        android:background=""
-                />
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/round"
+        android:text="로그인"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ImageView
-    android:id="@+id/imageView"
-    android:layout_width="101dp"
-    android:layout_height="141dp"
-    app:srcCompat="@drawable/user" />
+        android:id="@+id/imageView"
+        android:layout_width="101dp"
+        android:layout_height="141dp"
+        app:srcCompat="@drawable/user" />
 
     <LinearLayout
         android:layout_width="wrap_content"

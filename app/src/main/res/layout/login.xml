@@ -74,12 +74,13 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_password"
             android:layout_marginHorizontal="150dp"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#606060"
+            android:backgroundTint="#FF82AA"
+            android:background="@drawable/round"
             android:text="로그인" />
 
         <Button
