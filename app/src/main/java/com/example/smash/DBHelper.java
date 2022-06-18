@@ -8,14 +8,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "DB";
     private SQLiteDatabase userInfo;
+    static List<String> infoList;
 
     public DBHelper(@Nullable Context context) {
         super(context, "DB", null, 1);
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
@@ -57,20 +63,30 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("interest", interest);
         contentValues.put("time", time);
         contentValues.put("place", place);
+
         long result = MyDB.insert("SmashDB", null, contentValues);
         if(result == -1) return false;
         else
             return true;
     }
 
-    public Boolean DenoteInfo(String name, String department, String grade, String interest, String time, String place){
+    public List<String> selectInfo(){
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor = MyDB.rawQuery("Select * from SmashDB where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?", new String[]{name, department, grade, interest, time, place});
-        if(cursor.getCount() > 0)
-            return true;
-        else
-            return false;
+        String SELECT_QUERY = "SELECT*FROM SmashDB where name = ? and department = ? and grade = ? and interest = ? and time = ? and place = ?";
+        Cursor cur = getWritableDatabase().rawQuery(SELECT_QUERY,null);
+
+        int i=0;
+
+        infoList = new ArrayList<>();
+
+        while(cur.moveToNext()){
+            infoList.add(cur.getString(i));
+            i++;
+        }
+
+        return infoList;
     }
+
 /*
     public static final String DBNAME = "Login.db";
 

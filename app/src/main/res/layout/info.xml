@@ -27,9 +27,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이름"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
@@ -47,9 +48,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoDepartment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="학과"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
@@ -67,9 +69,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoGrade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="학년"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
@@ -87,9 +90,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoInterest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="관심분야"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
@@ -107,9 +111,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="희망 시간대"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>
@@ -127,9 +132,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"/>
         <TextView
+            android:id="@+id/infoPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="희망 장소"
+            android:text=""
             android:textSize="20dp"
             android:layout_marginTop="30dp"/>
     </LinearLayout>

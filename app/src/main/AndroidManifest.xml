@@ -23,6 +23,7 @@
         <activity android:name=".RoomActivity"/>
         <activity android:name=".ScheduleActivity"/>
         <activity android:name=".SignupActivity"/>
+        <activity android:name=".InfoActivity"/>
     </application>
 
 </manifest>
