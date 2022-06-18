@@ -89,8 +89,6 @@
                         android:layout_gravity="center_vertical"
                         android:text="" />
 
-
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -146,14 +144,46 @@
                             android:layout_height="wrap_content"
                             android:text="온라인"/>
                     </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
 
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="모집 상황      " />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         />
 
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
 
+                    <TextView
+                        android:id="@+id/textCate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="스터디 소개 " />
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Cat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="" />
 
-
-</LinearLayout>
+                </LinearLayout>
