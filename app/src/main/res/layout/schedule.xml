@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/split2">
 
 
     <TextView
@@ -31,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
@@ -145,32 +146,6 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
         app:layout_constraintEnd_toEndOf="@+id/save_Btn"/>
 
-    <Button
-        android:id="@+id/ScheduleBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="스케줄"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="57dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/RoomInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="룸 정보"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="57dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/noticeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="게시판"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="57dp"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

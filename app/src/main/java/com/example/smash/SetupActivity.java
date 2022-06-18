@@ -76,7 +76,7 @@ public class SetupActivity extends AppCompatActivity {
                             infoPlace.setText(iterator.next());
                         }
 
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), RealMainActivity.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(SetupActivity.this, "설정 실패", Toast.LENGTH_SHORT).show();

@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button StuRoomBtn = (Button) findViewById(R.id.StudyRoomBtn1);
         Button InfoBtn = (Button) findViewById(R.id.infoBtn);
+        Button settingBtn = (Button) findViewById(R.id.SettingBtn);
+        Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
+        Button makeRoomBtn = (Button) findViewById(R.id.makeRoomBtn);
 
         StuRoomBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        settingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SetupActivity.class);
+                startActivity(intent);
+            }
+        });
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        makeRoomBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

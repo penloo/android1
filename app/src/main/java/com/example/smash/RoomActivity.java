@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RoomActivity extends AppCompatActivity {
 
+    static int a = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,14 @@ public class RoomActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), NoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+        JoinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                a = 1;
+                Intent intent = new Intent(getApplicationContext(), RealMainActivity.class);
                 startActivity(intent);
             }
         });

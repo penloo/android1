@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RealMainActivity"/>
         <activity android:name="MainActivity"/>
         <activity android:name=".SetupActivity"/>
         <activity android:name=".RoomActivity"/>
