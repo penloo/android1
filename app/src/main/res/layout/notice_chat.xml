@@ -22,7 +22,9 @@
             android:layout_height="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/bm"
             android:text="게시판 글쓰기"
+            android:textColor="#FFE4D4"
             android:textSize="40dp" />
 
     </LinearLayout>
@@ -32,12 +34,14 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-    <TextView
-        android:layout_height="50dp"
-        android:layout_width="wrap_content"
-        android:text="제목"
-        android:layout_marginLeft="10dp"
-        android:textSize="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/bm"
+            android:text="제목"
+            android:textColor="#ED8876"
+            android:textSize="40dp" />
 
     <EditText
         android:layout_height="50dp"
@@ -45,25 +49,27 @@
         android:layout_marginLeft="10dp"
         android:id="@+id/Title"
         android:textSize="40dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
 
     <TextView
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="내용"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="40dp"/>
+        android:fontFamily="@font/bm"
+        android:text="내용"
+        android:textColor="#FFD9D9"
+        android:textSize="40dp" />
 
     <EditText
-        android:layout_height="400dp"
         android:layout_width="match_parent"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:layout_height="400dp"
+        android:background="@drawable/border3"
+        android:gravity="center|center_horizontal"
         android:hint="내용을 작성하세요"
-        android:gravity="center_horizontal"
-        android:background="@drawable/border"/>
+
+        android:textColorHint="#8E8E8E" />
 
     <Button
         android:layout_height="wrap_content"
@@ -71,6 +77,6 @@
         android:text="올리기"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/join_button_border"/>
+        android:background="@drawable/border3_1"/>
 
 </LinearLayout>

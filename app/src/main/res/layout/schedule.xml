@@ -4,42 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/split2">
+    android:backgroundTintMode="multiply"
+    android:orientation="vertical">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="컴퓨터알고리즘 스터디방"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bm"
         android:gravity="center"
+        android:text="컴퓨터알고리즘 스터디방"
+        android:textColor="#E6C4FF"
+        android:textSize="20dp"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/edittext"
         android:layout_marginTop="20dp"
+        android:background="@drawable/edittext"
+        android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
     </LinearLayout>
 
     <CalendarView
+
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:background="#FFF1FA"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
+        android:fontFamily="@font/bm"
         android:id="@+id/dateView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -55,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     <EditText
+        android:fontFamily="@font/bm"
         android:id="@+id/contextEditText"
         android:layout_width="0dp"
         android:layout_height="116dp"
@@ -80,6 +86,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:visibility="invisible"
+        android:fontFamily="@font/bm"
         app:layout_constraintBottom_toBottomOf="@+id/contextEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/contextEditText"
@@ -89,21 +96,23 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="달력"
+        android:fontFamily="@font/bm"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#9E28B3"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:fontFamily="@font/bm"
         android:id="@+id/save_Btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -121,6 +130,7 @@
 
 
     <Button
+        android:fontFamily="@font/bm"
         android:id="@+id/cha_Btn"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -135,6 +145,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:fontFamily="@font/bm"
         android:id="@+id/del_Btn"
         android:layout_width="176dp"
         android:layout_height="wrap_content"
@@ -144,8 +155,7 @@
         android:text="삭제"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
-        app:layout_constraintEnd_toEndOf="@+id/save_Btn"/>
-
+        app:layout_constraintEnd_toEndOf="@+id/save_Btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

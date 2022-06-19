@@ -9,35 +9,38 @@
 
     <Button
         android:id="@+id/onoffBtn"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/on_off_button"
-        android:layout_gravity="right"/>
+        android:layout_width="86dp"
+        android:layout_height="92dp"
+        android:layout_gravity="right"
+        android:background="@drawable/onoff" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginTop="330dp">
+        android:layout_marginTop="230dp">
 
         <Button
             android:id="@+id/searchBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/serch"
-            android:layout_marginLeft="40dp"/>
+            android:layout_width="116dp"
+            android:layout_height="131dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/serch" />
+
         <Button
             android:id="@+id/myNoticeBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/write"
-            android:layout_marginLeft="20dp"/>
+            android:layout_width="106dp"
+            android:layout_height="134dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/write" />
+
         <Button
             android:id="@+id/myInfoBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/my"
-            android:layout_marginLeft="20dp"/>
+            android:layout_width="117dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/my" />
 
     </LinearLayout>
 
