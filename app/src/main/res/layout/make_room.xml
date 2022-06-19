@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/split2">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
             android:background="@drawable/back" />
 
         <TextView
+            android:fontFamily="@font/bm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="스터디 개설"
@@ -43,6 +44,7 @@
 
 
             <TextView
+                android:fontFamily="@font/bm"
                 android:id="@+id/textStudy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,6 +74,7 @@
 
 
             <TextView
+                android:fontFamily="@font/bm"
                 android:id="@+id/textCate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,6 +102,7 @@
 
 
             <TextView
+                android:fontFamily="@font/bm"
                 android:id="@+id/txtwhere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,6 +112,7 @@
                 android:text="스터디 위치 :" />
 
             <TextView
+
                 android:id="@+id/where"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
@@ -128,6 +133,7 @@
 
 
             <TextView
+                android:fontFamily="@font/bm"
                 android:id="@+id/form"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,7 +169,7 @@
 
 
             <TextView
-
+                android:fontFamily="@font/bm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="모집 상황"
@@ -187,7 +193,7 @@
 
 
             <TextView
-
+                android:fontFamily="@font/bm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="스터디 소개 "
@@ -206,6 +212,7 @@
             android:hint="스터디 설명글"
             android:gravity="center"/>
         <Button
+            android:fontFamily="@font/bm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/join_button_border"
