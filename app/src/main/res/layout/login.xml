@@ -55,7 +55,7 @@
             android:layout_below="@+id/icon_user"
             android:layout_marginHorizontal="90dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/key" />
+            android:src="@android:drawable/ic_menu_search" />
 
         <EditText
             android:id="@+id/text_password"

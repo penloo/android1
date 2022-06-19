@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="컴퓨터알고리즘 스터디방"
-            android:textColor="#E6C4FF"
+            android:textColor="#FFB345"
             android:fontFamily="@font/bm"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
@@ -51,20 +51,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="룸 정보"
+            android:background="@drawable/border"
+            android:fontFamily="@font/bm"
             android:layout_marginLeft="40dp" />
         <Button
             android:id="@+id/ScheduleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/border2"
             android:text="스케줄"
+            android:fontFamily="@font/bm"
             android:layout_marginLeft="30dp" />
 
         <Button
             android:id="@+id/noticeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/border3"
             android:layout_marginLeft="30dp"
-            android:text="게시판" />
+            android:text="게시판"
+            android:fontFamily="@font/bm"/>
 
     </LinearLayout>
 
