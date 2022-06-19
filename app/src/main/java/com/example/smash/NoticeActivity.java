@@ -18,8 +18,28 @@ public class NoticeActivity extends AppCompatActivity {
     NoticeListAdapter noticeListAdapter;
     ArrayList<GetSetNotice> list_itemArrayList;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        Button noticeBack = (Button) findViewById(R.id.noticeBack);
+        Button noticeOnOff = (Button) findViewById(R.id.noticeOnOff);
+
+        noticeBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RealMainActivity.class);
+                startActivity(intent);
+            }
+        });
+        noticeOnOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notice);
         listView = (ListView) findViewById(R.id.listView);
