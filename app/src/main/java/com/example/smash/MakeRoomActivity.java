@@ -17,7 +17,7 @@ public class MakeRoomActivity extends AppCompatActivity {
         setContentView(R.layout.make_room);
         setTitle("Smash");
 
-        Button makeRoom = (Button) findViewById(R.id.makeRoomBtn);
+        Button makeRoom = (Button) findViewById(R.id.makeRoom);
 
         makeRoom.setOnClickListener(new View.OnClickListener() {
             @Override

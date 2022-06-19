@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.smash.LoginActivity;
 import com.example.smash.MainActivity;
 
 public class MakeNoticeActivity extends AppCompatActivity {
@@ -18,7 +19,9 @@ public class MakeNoticeActivity extends AppCompatActivity {
         setContentView(R.layout.notice_chat);
         setTitle("Smash");
 
-        Button makeRoom = (Button) findViewById(R.id.makeRoomBtn);
+        Button makeRoom = (Button) findViewById(R.id.uploadBtn);
+        Button makeBack = (Button) findViewById(R.id.Backbutton);
+        Button logoutBtn = (Button) findViewById(R.id.makeNoticeLogout);
 
         makeRoom.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +30,20 @@ public class MakeNoticeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        makeBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
-

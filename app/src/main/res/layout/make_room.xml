@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Backbutton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
@@ -26,198 +26,258 @@
             android:text="스터디 개설"
             android:textSize="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"/>
-    </LinearLayout>
+            android:layout_marginLeft="50dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:id="@+id/textStudy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
-                android:text="스터디명 :"
-                android:textSize="30dp"
-                />
-
-            <EditText
-                android:id="@+id/studyname"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edittext"
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:id="@+id/textCate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
-                android:textSize="30dp"
-                android:text="카테고리 :" />
-
-            <EditText
-                android:id="@+id/Cat"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edittext"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:id="@+id/txtwhere"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:textSize="30dp"
-                android:text="스터디 위치 :" />
-
-            <TextView
-
-                android:id="@+id/where"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edittext"
-                />
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:id="@+id/form"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
-                android:text="스터디 형태      " />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="오프라인" />
-
-                <RadioButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="온라인" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="모집 상황"
-                android:textSize="30dp"
-                android:layout_marginLeft="50dp"/>
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-
-            <TextView
-                android:fontFamily="@font/bm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스터디 소개 "
-                android:textSize="30dp"/>
-
-
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:background="@drawable/edittext"
-            android:hint="스터디 설명글"
-            android:gravity="center"/>
         <Button
-            android:fontFamily="@font/bm"
+            android:id="@+id/makeRoomLogout"
+            android:layout_width="66dp"
+            android:layout_height="69dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/onoff" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/join_button_border"
-            android:text="만들기"
-            />
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
-    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textStudy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/bm"
+                        android:text="스터디명 :"
+
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/studyname"
+                        android:layout_width="211dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:id="@+id/textCate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="30dp"
+                        android:text="카테고리 :" />
+
+                    <EditText
+                        android:id="@+id/Cat"
+                        android:layout_width="207dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:id="@+id/txtwhere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="30dp"
+                        android:text="스터디 위치 :" />
+
+                    <EditText
+
+                        android:id="@+id/whereEdt"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/edittext" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:fontFamily="@font/bm"
+                        android:id="@+id/txtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:textSize="30dp"
+                        android:text="희망 시간대 :" />
+                    <EditText
+
+                        android:id="@+id/where"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/edittext"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:id="@+id/txtCountUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:textSize="30dp"
+                        android:text="최대인원 :" />
+                    <Spinner
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/countUserSpinner"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:entries="@array/countUser"
+                        android:background="@drawable/round2"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:id="@+id/form"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="스터디 형태      " />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="오프라인" />
+
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="온라인" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="모집 상황"
+                        android:textSize="30dp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:fontFamily="@font/bm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="스터디 소개 "
+                        android:textSize="30dp"/>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext"
+                    android:hint="스터디 설명글"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/makeRoom"
+                    android:fontFamily="@font/bm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/join_button_border"
+                    android:text="만들기"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
