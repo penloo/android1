@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/split2"
+
     android:orientation="vertical"
     tools:context=".SignupActivity">
 
@@ -19,9 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:hint="   학교"
             android:entries="@array/school"
-            android:minHeight="48dp" />
+            android:hint="   학교"
+            android:fontFamily="@font/bm"
+            android:minHeight="48dp"
+            android:textColorHint="#FFD0F2" />
 
         <EditText
             android:id="@+id/text_user"
@@ -30,7 +32,9 @@
             android:layout_below="@id/text_school"
             android:layout_marginTop="50dp"
             android:hint="   학번"
-            android:minHeight="48dp" />
+            android:fontFamily="@font/bm"
+            android:minHeight="48dp"
+            android:textColorHint="#FFD0F2" />
 
         <EditText
             android:id="@+id/text_password"
@@ -39,8 +43,10 @@
             android:layout_below="@id/text_user"
             android:layout_marginTop="50dp"
             android:hint="   비밀번호"
+            android:fontFamily="@font/bm"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHint="#FFD0F2" />
 
         <Button
             android:id="@+id/btn_signup"
@@ -49,7 +55,11 @@
             android:layout_below="@id/text_password"
             android:layout_marginTop="50dp"
             android:background="@drawable/round"
+            android:backgroundTint="#FFD0E0"
             android:text=" 가입하기"
+            android:fontFamily="@font/bm"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <Button
@@ -58,7 +68,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_signup"
             android:layout_marginTop="50dp"
-            android:text="User already exists, proceed to sign in" />
+            android:background="@drawable/round"
+            android:backgroundTint="#EED0FF"
+            android:text="뒤로 가기"
+            android:fontFamily="@font/bm"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

@@ -3,12 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/split2">
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="컴퓨터알고리즘 스터디방"
+        android:fontFamily="@font/bm"
         android:textSize="20dp"
         android:layout_marginTop="10dp"
         android:gravity="center"/>
@@ -24,12 +25,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="룸 정보"
+            android:fontFamily="@font/bm"
             android:layout_marginLeft="40dp" />
         <Button
             android:id="@+id/ScheduleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="스케줄"
+            android:fontFamily="@font/bm"
             android:layout_marginLeft="30dp" />
 
         <Button
@@ -37,7 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:text="게시판" />
+            android:text="게시판"
+            android:fontFamily="@font/bm"/>
 
     </LinearLayout>
 
@@ -63,22 +67,27 @@
                     android:layout_marginTop="140dp"
                     android:gravity="center_horizontal"
                     android:text="컴퓨터알고리즘 스터디방 설명칸"
+                    android:fontFamily="@font/bm"
                     android:textSize="20dp" />
             </LinearLayout>
+
             <Button
                 android:id="@+id/JoinBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="입장"
-                android:background="@drawable/join_button_border"
                 android:layout_marginLeft="160dp"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round3"
+                android:text="입장"
+                android:fontFamily="@font/bm"
+                android:textColor="#FFF7F7" />
             <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#999999"
+                android:background="@drawable/round"
                 android:stretchColumns="*"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                >
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -89,28 +98,31 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="60dp"
                         android:text="No."
+                        android:fontFamily="@font/bm"
                         android:textSize="20dp"
-                        android:background="#666666"/>
+                        android:background="#E2C9FF"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="60dp"
                         android:text="Name"
+                        android:fontFamily="@font/bm"
                         android:textSize="20dp"
-                        android:background="#666666"/>
+                        android:background="#E2C9FF"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="60dp"
                         android:text="학번"
+                        android:fontFamily="@font/bm"
                         android:textSize="20dp"
-                        android:background="#666666"/>
+                        android:background="#E2C9FF"/>
 
                 </TableRow>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
-                    android:background="#40E0D0"/>
+                    android:background="#FFEBF7"/>
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -119,24 +131,27 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="1번"
-                        android:textSize="20dp"
-                        />
+                        android:fontFamily="@font/bm"
+                        android:textSize="20dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="박태연"
+                        android:fontFamily="@font/bm"
                         android:textSize="20dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="2018xxxx"
+                        android:fontFamily="@font/bm"
                         android:textSize="20dp"
                         android:gravity="left"
                         />
@@ -151,26 +166,29 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="2번"
                         android:textSize="20dp"
+                        android:fontFamily="@font/bm"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="하재민"
                         android:textSize="20dp"
+                        android:fontFamily="@font/bm"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:background="#FFFDF5"
                         android:paddingLeft="60dp"
                         android:text="2018xxxx"
                         android:textSize="20dp"
+                        android:fontFamily="@font/bm"
                         />
 
                 </TableRow>

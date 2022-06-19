@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/split2">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,19 +13,24 @@
             android:id="@+id/InfoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="회원정보 설정"
-            android:textSize="40dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bm"
+            android:text="회원정보 설정"
+            android:textColor="#FFADDA"
+            android:textSize="40dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/NameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이름"
-            android:textSize="25dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/bm"
+
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="25dp"/>
 
         <EditText
             android:id="@+id/NameEdt"
@@ -33,15 +38,16 @@
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:hint="이름을 입력하세요" />
+            android:background="@drawable/round2"
+            android:hint=" 이름을 입력하세요" />
 
         <TextView
             android:id="@+id/DepartmentText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="학과"
-            android:textSize="25dp"
+            android:fontFamily="@font/bm"
+            android:textSize="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
             />
@@ -53,7 +59,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:entries="@array/department"
-            android:background="@drawable/edittext"
+            android:background="@drawable/round2"
             />
 
         <TextView
@@ -61,7 +67,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="학년"
-            android:textSize="25dp"
+            android:fontFamily="@font/bm"
+            android:textSize="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"/>
 
@@ -72,7 +79,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:entries="@array/grade"
-            android:background="@drawable/edittext"
+            android:background="@drawable/round2"
             />
 
         <TextView
@@ -80,7 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="관심분야"
-            android:textSize="25dp"
+            android:fontFamily="@font/bm"
+            android:textSize="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"/>
 
@@ -90,15 +98,16 @@
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:hint="관심분야" />
+            android:background="@drawable/round2"
+            android:hint="  관심분야" />
 
         <TextView
             android:id="@+id/TimeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="희망 시간대"
-            android:textSize="25dp"
+            android:fontFamily="@font/bm"
+            android:textSize="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"/>
 
@@ -108,15 +117,16 @@
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:hint="희망 시간대" />
+            android:background="@drawable/round2"
+            android:hint="  희망 시간대" />
 
         <TextView
             android:id="@+id/PlaceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="희망 장소"
-            android:textSize="25dp"
+            android:fontFamily="@font/bm"
+            android:textSize="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"/>
 
@@ -126,8 +136,8 @@
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:hint="희망 장소" />
+            android:background="@drawable/round2"
+            android:hint="  희망 장소" />
 
         <Button
             android:id="@+id/SettingBtn"
@@ -135,12 +145,14 @@
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="#606060"
+            android:background="@drawable/round3"
+            android:fontFamily="@font/bm"
+            android:textColor="#FFFFFF"
             android:text="수정" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
